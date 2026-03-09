@@ -1,0 +1,4 @@
+wandb
+numpy==1.23.5
+rl-games==1.1.4
+pandas

@@ -1,0 +1,6 @@
+output/
+wandb/
+*.obj
+*.pyc
+isaac-gym-preview-*
+isaacgym/

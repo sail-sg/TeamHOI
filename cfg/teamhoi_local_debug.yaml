@@ -1,0 +1,99 @@
+params:
+  seed: -1
+
+  algo:
+    name: trans
+
+  model:
+    name: amp
+
+  network:
+    name: teamhoi_transformer
+
+    transformer:
+      num_features: 64
+      tokenizer_units: [256, 128]
+      num_layers: 6
+      layer_num_heads: 2
+      layer_dim_feedforward: 512
+      use_pos_embed: False
+      extra_mlp_units: [1024, 512]
+
+    space:
+      continuous:
+        mu_activation: None
+        sigma_activation: None
+        mu_init:
+          name: default
+        sigma_init:
+          name: const_initializer
+          val: -2.9
+        fixed_sigma: True
+        learn_sigma: False
+
+    mlp:
+      units: [123, 123, 123]
+      activation: relu
+      d2rl: False
+
+      initializer:
+        name: default
+      regularizer:
+        name: None
+
+    disc:
+      units: [1024, 512]
+      activation: relu
+
+      initializer:
+        name: default
+
+  config:
+    name: MyExperiment
+    env_name: rlgpu
+    dist_threshold: 1.0
+    multi_gpu: False
+    ppo: True
+    mixed_precision: False
+    normalize_input: True
+    normalize_value: True
+    reward_shaper:
+      scale_value: 1
+    normalize_advantage: True
+    w: [0.2, 0.4, 0.2, 0.6, 0.7, 0.7, 0.7, 1.0, 0.4, 1.0]
+    gamma: 0.99
+    tau: 0.95
+    learning_rate: 2e-5
+    lr_schedule: constant
+    score_to_win: 20000
+    max_epochs: 2000000
+    save_best_after: 50000000000
+    save_frequency: 50
+    print_stats: True
+    grad_norm: 1.0
+    entropy_coef: 0.0
+    truncate_grads: False
+    ppo: True
+    e_clip: 0.2
+    horizon_length: 32
+    minibatch_size: 512
+    mini_epochs: 6
+    critic_coef: 5
+    clip_value: False
+    seq_len: 4
+    bounds_loss_coef: 10
+    amp_obs_demo_buffer_size: 200000
+    amp_replay_buffer_size: 200000
+    amp_replay_keep_prob: 0.01
+    amp_batch_size: 128
+    amp_minibatch_size: 512
+    disc_coef: 5
+    disc_logit_reg: 0.01
+    disc_grad_penalty: 5
+    disc_reward_scale: 2
+    disc_weight_decay: 0.0001
+    normalize_amp_input: True
+    enable_eps_greedy: False
+
+    task_reward_w: 0.5
+    disc_reward_w: 0.5

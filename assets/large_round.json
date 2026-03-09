@@ -1,0 +1,9 @@
+{
+  "asset": "large_round.urdf",
+  "offset": 0.02,
+  "table_radius": 1.20,
+  "k_rim": 64,
+  "z_local": -0.03,
+  "height": 0.82,
+  "type": "round"
+}

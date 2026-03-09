@@ -1,0 +1,9 @@
+{
+  "asset": "5x_weight_rectangle.urdf",
+  "hx": 2.0,
+  "hy": 1.20,
+  "offset": 0.02,
+  "z_local": -0.03,
+  "height": 0.82,
+  "type": "rect"
+}

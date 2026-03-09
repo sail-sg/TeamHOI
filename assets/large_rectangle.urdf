@@ -1,0 +1,113 @@
+<?xml version="1.0"?>
+<robot name="rect_table_300x140_inset">
+
+  <!-- Rectangular tabletop: X=3.00 m, Y=1.40 m, H=0.04 m -->
+  <!-- Density = 600 kg/m^3, Mass = 100.8 kg -->
+  <!-- Inertias about COM:
+       Ixx = 16.4712
+       Iyy = 75.6736
+       Izz = 92.1448
+  -->
+
+  <link name="tabletop">
+    <inertial>
+      <origin xyz="0 0 0"/>
+      <mass value="100.8"/>
+      <inertia
+        ixx="16.4712" ixy="0" ixz="0"
+        iyy="75.6736" iyz="0"
+        izz="92.1448"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0"/>
+      <geometry><box size="3.00 1.40 0.04"/></geometry>
+      <material name="wood"><color rgba="0.6 0.4 0.2 1"/></material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0"/>
+      <geometry><box size="3.00 1.40 0.04"/></geometry>
+    </collision>
+  </link>
+
+  <!-- Legs unchanged except placement -->
+  <link name="leg1">
+    <inertial>
+      <origin xyz="0 0 0"/>
+      <mass value="0.7296"/>
+      <inertia
+        ixx="0.03521536" ixy="0" ixz="0"
+        iyy="0.03521536" iyz="0"
+        izz="0.00019456"/>
+    </inertial>
+    <visual><origin xyz="0 0 0"/><geometry><box size="0.04 0.04 0.82"/></geometry></visual>
+    <collision><origin xyz="0 0 0"/><geometry><box size="0.04 0.04 0.82"/></geometry></collision>
+  </link>
+
+  <link name="leg2">
+    <inertial>
+      <origin xyz="0 0 0"/>
+      <mass value="0.7296"/>
+      <inertia
+        ixx="0.03521536" ixy="0" ixz="0"
+        iyy="0.03521536" iyz="0"
+        izz="0.00019456"/>
+    </inertial>
+    <visual><origin xyz="0 0 0"/><geometry><box size="0.04 0.04 0.82"/></geometry></visual>
+    <collision><origin xyz="0 0 0"/><geometry><box size="0.04 0.04 0.82"/></geometry></collision>
+  </link>
+
+  <link name="leg3">
+    <inertial>
+      <origin xyz="0 0 0"/>
+      <mass value="0.7296"/>
+      <inertia
+        ixx="0.03521536" ixy="0" ixz="0"
+        iyy="0.03521536" iyz="0"
+        izz="0.00019456"/>
+    </inertial>
+    <visual><origin xyz="0 0 0"/><geometry><box size="0.04 0.04 0.82"/></geometry></visual>
+    <collision><origin xyz="0 0 0"/><geometry><box size="0.04 0.04 0.82"/></geometry></collision>
+  </link>
+
+  <link name="leg4">
+    <inertial>
+      <origin xyz="0 0 0"/>
+      <mass value="0.7296"/>
+      <inertia
+        ixx="0.03521536" ixy="0" ixz="0"
+        iyy="0.03521536" iyz="0"
+        izz="0.00019456"/>
+    </inertial>
+    <visual><origin xyz="0 0 0"/><geometry><box size="0.04 0.04 0.82"/></geometry></visual>
+    <collision><origin xyz="0 0 0"/><geometry><box size="0.04 0.04 0.82"/></geometry></collision>
+  </link>
+
+  <!-- Leg positions for 3.0 x 1.4 table -->
+  <!-- inset = 0.12 -> (±1.38, ±0.58) -->
+  <!-- z = -0.43 -->
+
+  <joint name="table_leg1" type="fixed">
+    <parent link="tabletop"/>
+    <child  link="leg1"/>
+    <origin xyz=" 1.38  0.58 -0.43" rpy="0 0 0"/>
+  </joint>
+
+  <joint name="table_leg2" type="fixed">
+    <parent link="tabletop"/>
+    <child  link="leg2"/>
+    <origin xyz="-1.38  0.58 -0.43" rpy="0 0 0"/>
+  </joint>
+
+  <joint name="table_leg3" type="fixed">
+    <parent link="tabletop"/>
+    <child  link="leg3"/>
+    <origin xyz="-1.38 -0.58 -0.43" rpy="0 0 0"/>
+  </joint>
+
+  <joint name="table_leg4" type="fixed">
+    <parent link="tabletop"/>
+    <child  link="leg4"/>
+    <origin xyz=" 1.38 -0.58 -0.43" rpy="0 0 0"/>
+  </joint>
+
+</robot>
