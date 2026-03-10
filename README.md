@@ -21,8 +21,8 @@
 
 <div align="center">
 <a href="https://splionar.github.io/TeamHOI/"> <img src="https://img.shields.io/badge/🌐 Project-Page-blue?"></a>&nbsp;&nbsp;
-<a href="https://splionar.github.io/TeamHOI/"><img src="https://img.shields.io/badge/arXiv-2503.11629-red?"></a>&nbsp;&nbsp;
- <a href="https://splionar.github.io/TeamHOI/TeamHOI.pdf"><img src="https://img.shields.io/badge/Paper-📖-green?"></a> 
+<a href="https://arxiv.org/abs/2603.07988"><img src="https://img.shields.io/badge/arXiv-2603.07988-red?"></a>&nbsp;&nbsp;
+ <a href="https://arxiv.org/pdf/2603.07988"><img src="https://img.shields.io/badge/Paper-📖-green?"></a> 
 </div>
 
 
