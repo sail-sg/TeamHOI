@@ -681,9 +681,9 @@ class HumanoidAMPTableLift(humanoid_amp_task_multi.HumanoidAMPTaskMulti):
             r_putdown = zeros
 
 
-        total_reward = w[0] * r_pos + w[1] * r_vel + w[2] * (r_face * r_ang)**0.5 
-        + w[3] * r_form + w[4] * (r_hand * r_cov) + w[5] * r_contact + w[6] * (r_lift * r_cov) \
-        + w[7] * r_transport + w[8] * r_align + w[9] * r_putdown
+        total_reward = w[0] * r_pos + w[1] * r_vel + w[2] * (r_face * r_ang)**0.5 + \
+        w[3] * r_form + w[4] * (r_hand * r_cov) + w[5] * r_contact + w[6] * (r_lift * r_cov) + \
+        w[7] * r_transport + w[8] * r_align + w[9] * r_putdown
 
         self.rew_buf = total_reward.view(n_envs, n_agents)
 
